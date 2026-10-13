@@ -1,0 +1,14 @@
+{
+  "name": "shop-ao-react-node",
+  "version": "1.0.0",
+  "description": "Full-stack Shop Ao Thun with ReactJS and NodeJS",
+  "main": "server/src/index.js",
+  "scripts": {
+    "build": "cd client && npm install && npm run build && cd ../server && npm install && node src/db/seed.js",
+    "start": "cd server && node src/index.js",
+    "seed": "cd server && node src/db/seed.js"
+  },
+  "keywords": [],
+  "author": "Duylee007",
+  "license": "ISC"
+}

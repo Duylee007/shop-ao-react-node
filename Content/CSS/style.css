@@ -1,0 +1,1277 @@
+/* ===================================================
+   YAME STYLE DESIGN SYSTEM - SHOP DUY FASHION
+   Phong cách: Tối giản - Sang trọng - Thời trang nam hiện đại
+   Triết lý: Mặc Bền - Mặc Mềm - Không Lỗi Mốt
+   =================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --yame-black: #111111;
+    --yame-dark: #18181b;
+    --yame-gray-900: #27272a;
+    --yame-gray-800: #3f3f46;
+    --yame-gray-600: #52525b;
+    --yame-gray-500: #71717a;
+    --yame-gray-300: #d4d4d8;
+    --yame-gray-200: #e4e4e7;
+    --yame-gray-100: #f4f4f5;
+    --yame-gray-50: #fafafa;
+    --yame-white: #ffffff;
+    --yame-red: #e11d48;
+    --yame-red-hover: #be123c;
+    --yame-accent: #f59e0b;
+    
+    --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
+    --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+    --border-radius-sm: 6px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 16px;
+    --border-radius-pill: 9999px;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: #fafafa;
+    color: var(--yame-black);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+a:hover {
+    color: var(--yame-red);
+}
+
+/* ===================================================
+   TOPBAR
+   =================================================== */
+.yame-topbar {
+    background-color: var(--yame-black);
+    color: #d4d4d8;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 7px 0;
+}
+
+.yame-topbar a {
+    color: #d4d4d8;
+    transition: color 0.2s;
+}
+
+.yame-topbar a:hover {
+    color: var(--yame-white);
+    text-decoration: underline;
+}
+
+.topbar-promo-tag {
+    background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+    color: #fff;
+    padding: 2px 9px;
+    border-radius: var(--border-radius-pill);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+/* ===================================================
+   NAVBAR & HEADER
+   =================================================== */
+.yame-navbar {
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 0.85rem 0;
+    transition: var(--transition-smooth);
+    z-index: 1030;
+}
+
+.yame-brand {
+    font-size: 1.65rem;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    color: var(--yame-black) !important;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.yame-brand-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background-color: var(--yame-red);
+    border-radius: 50%;
+    margin-left: 2px;
+}
+
+.yame-brand-sub {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--yame-gray-500);
+    display: block;
+    line-height: 1;
+    margin-top: 4px;
+}
+
+.yame-nav-link {
+    font-size: 0.86rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--yame-dark) !important;
+    padding: 0.6rem 0.85rem !important;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+.yame-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--yame-black);
+    transition: var(--transition-smooth);
+    transform: translateX(-50%);
+}
+
+.yame-nav-link:hover::after,
+.yame-nav-link.active::after {
+    width: 60%;
+}
+
+.yame-nav-link:hover {
+    color: var(--yame-black) !important;
+}
+
+.nav-tag-sale {
+    background-color: var(--yame-red);
+    color: white;
+    font-size: 0.58rem;
+    font-weight: 800;
+    padding: 2px 5px;
+    border-radius: var(--border-radius-pill);
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    line-height: 1;
+}
+
+/* Header Search */
+.yame-search-box {
+    position: relative;
+    width: 220px;
+    transition: var(--transition-smooth);
+}
+
+.yame-search-box:focus-within {
+    width: 270px;
+}
+
+.yame-search-input {
+    border-radius: var(--border-radius-pill);
+    border: 1px solid #e4e4e7;
+    background-color: #f4f4f5;
+    padding: 0.48rem 1rem 0.48rem 2.3rem;
+    font-size: 0.84rem;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+    width: 100%;
+}
+
+.yame-search-input:focus {
+    background-color: #fff;
+    border-color: var(--yame-black);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.yame-search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--yame-gray-500);
+    font-size: 0.85rem;
+    pointer-events: none;
+}
+
+/* Cart & User Action Buttons */
+.yame-icon-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f5;
+    color: var(--yame-black);
+    border: 1px solid transparent;
+    transition: var(--transition-smooth);
+    font-size: 0.95rem;
+}
+
+.yame-icon-btn:hover {
+    background: var(--yame-black);
+    color: var(--yame-white);
+    transform: translateY(-2px);
+}
+
+.yame-cart-badge {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    background: var(--yame-red);
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 800;
+    min-width: 19px;
+    height: 19px;
+    line-height: 19px;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid white;
+}
+
+/* ===================================================
+   HERO BANNER (YaMe Signature Style)
+   =================================================== */
+.yame-hero {
+    position: relative;
+    background: linear-gradient(125deg, #09090b 0%, #18181b 55%, #050505 100%);
+    color: var(--yame-white);
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.yame-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(225, 29, 72, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.yame-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 6px 16px;
+    border-radius: var(--border-radius-pill);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fbbf24;
+}
+
+.yame-hero-title {
+    font-size: 3.4rem;
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.yame-hero-title span {
+    color: var(--yame-red);
+}
+
+.yame-hero-desc {
+    font-size: 1.05rem;
+    color: #a1a1aa;
+    font-weight: 400;
+    max-width: 520px;
+}
+
+.yame-hero-img-box {
+    position: relative;
+    padding: 1rem;
+}
+
+.yame-hero-img {
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.6s ease;
+    object-fit: cover;
+    max-height: 440px;
+    width: 100%;
+}
+
+.yame-hero-img-box:hover .yame-hero-img {
+    transform: scale(1.02);
+}
+
+.yame-hero-floating-card {
+    position: absolute;
+    bottom: 20px;
+    left: -10px;
+    background: rgba(17, 17, 17, 0.88);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: var(--border-radius-md);
+    padding: 12px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* ===================================================
+   PROMISES / FEATURES BAR
+   =================================================== */
+.yame-commitments {
+    background: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 2.2rem 0;
+}
+
+.commitment-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0.5rem;
+    transition: var(--transition-smooth);
+}
+
+.commitment-icon-wrap {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--border-radius-md);
+    background: #f4f4f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--yame-black);
+    flex-shrink: 0;
+    transition: var(--transition-smooth);
+}
+
+.commitment-item:hover .commitment-icon-wrap {
+    background: var(--yame-black);
+    color: var(--yame-white);
+    transform: translateY(-3px);
+}
+
+.commitment-title {
+    font-size: 0.92rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.commitment-desc {
+    font-size: 0.8rem;
+    color: var(--yame-gray-500);
+    margin-bottom: 0;
+}
+
+/* ===================================================
+   CATEGORY QUICK NAV (Story Pills)
+   =================================================== */
+.category-pill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.2rem 0.6rem;
+    border-radius: var(--border-radius-md);
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    transition: var(--transition-smooth);
+    color: var(--yame-black);
+    text-decoration: none;
+}
+
+.category-pill-item:hover {
+    border-color: var(--yame-black);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+    color: var(--yame-black);
+}
+
+.category-icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f4f4f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    margin-bottom: 10px;
+    transition: var(--transition-smooth);
+    color: var(--yame-black);
+}
+
+.category-pill-item:hover .category-icon-box {
+    background: var(--yame-black);
+    color: white;
+}
+
+.category-pill-name {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* ===================================================
+   SECTION HEADERS
+   =================================================== */
+.yame-section-header {
+    text-align: center;
+    margin-bottom: 2.8rem;
+    position: relative;
+}
+
+.yame-section-subtitle {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--yame-red);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.yame-section-title {
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--yame-black);
+    margin-bottom: 8px;
+}
+
+.yame-title-line {
+    width: 45px;
+    height: 3px;
+    background: var(--yame-black);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ===================================================
+   YAME PRODUCT CARDS (Signature Lookbook Card)
+   =================================================== */
+.yame-product-card {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: var(--transition-smooth);
+}
+
+.yame-product-card:hover {
+    border-color: #e4e4e7;
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+/* Image Wrapper */
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 115%; /* 3:4 fashion lookbook aspect ratio */
+    overflow: hidden;
+    background: #f9f9f9;
+}
+
+.product-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.yame-product-card:hover .product-image-wrapper img {
+    transform: scale(1.07);
+}
+
+/* Badges */
+.badge-discount-yame {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--yame-red);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: var(--border-radius-pill);
+    letter-spacing: 0.5px;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(225, 29, 72, 0.3);
+}
+
+.badge-tag-new {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--yame-black);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: var(--border-radius-pill);
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+/* Quick Action Overlay (Slide-Up) */
+.product-quick-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 12px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+    display: flex;
+    gap: 8px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: var(--transition-smooth);
+    z-index: 3;
+}
+
+.yame-product-card:hover .product-quick-actions {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.btn-quick-view {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--yame-black);
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: var(--border-radius-pill);
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: var(--transition-smooth);
+    text-decoration: none;
+}
+
+.btn-quick-view:hover {
+    background: var(--yame-black);
+    color: white;
+}
+
+.btn-quick-cart {
+    background: var(--yame-red);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    transition: var(--transition-smooth);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.btn-quick-cart:hover {
+    background: var(--yame-red-hover);
+    transform: scale(1.08);
+}
+
+/* Card Body */
+.yame-card-body {
+    padding: 14px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.product-category-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--yame-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.product-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--yame-black);
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.5em;
+}
+
+.product-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.product-title a:hover {
+    color: var(--yame-red);
+}
+
+/* Color Swatches */
+.product-swatches {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.swatch-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #d4d4d8;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.swatch-dot:hover {
+    transform: scale(1.25);
+}
+
+.swatch-white { background-color: #ffffff; }
+.swatch-black { background-color: #111111; }
+.swatch-gray { background-color: #9ca3af; }
+.swatch-navy { background-color: #1e3a8a; }
+
+/* Pricing */
+.product-price-box {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.price-current {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--yame-red);
+    letter-spacing: -0.3px;
+}
+
+.price-current.normal {
+    color: var(--yame-black);
+}
+
+.price-old {
+    font-size: 0.82rem;
+    color: var(--yame-gray-500);
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+/* ===================================================
+   EDITORIAL / LOOKBOOK BANNERS
+   =================================================== */
+.lookbook-banner {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    min-height: 380px;
+    display: flex;
+    align-items: flex-end;
+    padding: 2.5rem;
+}
+
+.lookbook-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.lookbook-banner:hover .lookbook-bg-img {
+    transform: scale(1.05);
+}
+
+.lookbook-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+}
+
+.lookbook-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.lookbook-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fbbf24;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.lookbook-title {
+    font-size: 1.85rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.lookbook-desc {
+    font-size: 0.9rem;
+    color: #d4d4d8;
+    margin-bottom: 1.2rem;
+    max-width: 400px;
+}
+
+/* ===================================================
+   BUTTONS (YaMe UI Style)
+   =================================================== */
+.btn-yame-dark {
+    background: var(--yame-black);
+    color: var(--yame-white);
+    border: 1px solid var(--yame-black);
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.75rem 1.8rem;
+    border-radius: var(--border-radius-pill);
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-yame-dark:hover {
+    background: #27272a;
+    border-color: #27272a;
+    color: var(--yame-white);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-yame-red {
+    background: var(--yame-red);
+    color: var(--yame-white);
+    border: 1px solid var(--yame-red);
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.75rem 1.8rem;
+    border-radius: var(--border-radius-pill);
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-yame-red:hover {
+    background: var(--yame-red-hover);
+    border-color: var(--yame-red-hover);
+    color: var(--yame-white);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(225, 29, 72, 0.3);
+}
+
+.btn-yame-outline {
+    background: transparent;
+    color: var(--yame-black);
+    border: 2px solid var(--yame-black);
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.7rem 1.8rem;
+    border-radius: var(--border-radius-pill);
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-yame-outline:hover {
+    background: var(--yame-black);
+    color: var(--yame-white);
+    transform: translateY(-2px);
+}
+
+.btn-yame-white {
+    background: #ffffff;
+    color: var(--yame-black);
+    border: 1px solid #ffffff;
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.75rem 1.8rem;
+    border-radius: var(--border-radius-pill);
+    transition: var(--transition-smooth);
+    text-decoration: none;
+}
+
+.btn-yame-white:hover {
+    background: #f4f4f5;
+    color: var(--yame-black);
+    transform: translateY(-2px);
+}
+
+/* ===================================================
+   PRODUCT DETAIL PAGE
+   =================================================== */
+.product-gallery-main {
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+}
+
+.product-gallery-main img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+}
+
+.detail-brand-badge {
+    display: inline-block;
+    background: #f4f4f5;
+    color: var(--yame-black);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: var(--border-radius-pill);
+    margin-bottom: 10px;
+}
+
+.detail-product-title {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--yame-black);
+    margin-bottom: 12px;
+}
+
+.detail-price-box {
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--border-radius-md);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.detail-price-sale {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--yame-red);
+    letter-spacing: -1px;
+}
+
+.detail-price-original {
+    font-size: 1.2rem;
+    color: var(--yame-gray-500);
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+/* Size Pills */
+.size-selector-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.size-pill-radio {
+    display: none;
+}
+
+.size-pill-label {
+    min-width: 48px;
+    height: 42px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e4e4e7;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--yame-black);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    user-select: none;
+}
+
+.size-pill-radio:checked + .size-pill-label {
+    border-color: var(--yame-black);
+    background: var(--yame-black);
+    color: var(--yame-white);
+}
+
+.size-pill-label:hover {
+    border-color: var(--yame-black);
+}
+
+/* Quantity Stepper */
+.quantity-stepper {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #e4e4e7;
+    border-radius: var(--border-radius-pill);
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.quantity-btn {
+    width: 40px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--yame-black);
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-btn:hover {
+    background: #f4f4f5;
+}
+
+.quantity-input {
+    width: 50px;
+    height: 42px;
+    border: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--yame-black);
+}
+
+.quantity-input:focus {
+    outline: none;
+}
+
+/* Trust Card in Details */
+.detail-trust-box {
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--border-radius-md);
+    padding: 18px 22px;
+    margin-top: 24px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--yame-gray-900);
+}
+
+.trust-item i {
+    color: var(--yame-black);
+    font-size: 1.1rem;
+    width: 24px;
+    text-align: center;
+}
+
+/* ===================================================
+   CART & CHECKOUT
+   =================================================== */
+.cart-table-card {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-subtle);
+}
+
+.cart-summary-card {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--border-radius-md);
+    padding: 24px;
+    box-shadow: var(--shadow-subtle);
+    position: sticky;
+    top: 90px;
+}
+
+.cart-item-img {
+    width: 80px;
+    height: 90px;
+    border-radius: var(--border-radius-sm);
+    object-fit: cover;
+    border: 1px solid #f0f0f0;
+}
+
+/* ===================================================
+   SIDEBAR & FILTERS (Product List)
+   =================================================== */
+.filter-card {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--border-radius-md);
+    padding: 22px;
+    box-shadow: var(--shadow-subtle);
+}
+
+.filter-category-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--yame-gray-800);
+    transition: var(--transition-smooth);
+    margin-bottom: 4px;
+    text-decoration: none;
+}
+
+.filter-category-link:hover,
+.filter-category-link.active {
+    background: var(--yame-black);
+    color: var(--yame-white) !important;
+}
+
+/* ===================================================
+   FOOTER (YaMe Luxury Dark Style)
+   =================================================== */
+.yame-footer {
+    background: var(--yame-black);
+    color: #a1a1aa;
+    font-size: 0.88rem;
+    padding: 4.5rem 0 2rem;
+    margin-top: 5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--yame-white);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.footer-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--yame-white);
+    margin-bottom: 1.4rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #a1a1aa;
+    transition: var(--transition-smooth);
+    font-size: 0.88rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--yame-white);
+    padding-left: 4px;
+}
+
+.newsletter-box {
+    display: flex;
+    border-radius: var(--border-radius-pill);
+    overflow: hidden;
+    background: #27272a;
+    border: 1px solid #3f3f46;
+    padding: 4px;
+}
+
+.newsletter-input {
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    font-size: 0.85rem;
+    flex-grow: 1;
+}
+
+.newsletter-input:focus {
+    outline: none;
+}
+
+.newsletter-btn {
+    background: var(--yame-red);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-pill);
+    padding: 8px 18px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.newsletter-btn:hover {
+    background: var(--yame-red-hover);
+}
+
+.social-icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #27272a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 8px;
+    transition: var(--transition-smooth);
+    text-decoration: none;
+}
+
+.social-icon-btn:hover {
+    background: var(--yame-white);
+    color: var(--yame-black);
+    transform: translateY(-3px);
+}
+
+.footer-bottom-line {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #71717a;
+}
+
+/* ===================================================
+   RESPONSIVE OPTIMIZATIONS
+   =================================================== */
+@media (max-width: 991px) {
+    .yame-hero {
+        min-height: auto;
+        padding: 3rem 0;
+    }
+    .yame-hero-title {
+        font-size: 2.4rem;
+    }
+    .yame-search-box {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .yame-search-box:focus-within {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .yame-hero-title {
+        font-size: 1.85rem;
+    }
+    .yame-section-title {
+        font-size: 1.5rem;
+    }
+    .product-title {
+        font-size: 0.85rem;
+    }
+    .price-current {
+        font-size: 0.95rem;
+    }
+}
